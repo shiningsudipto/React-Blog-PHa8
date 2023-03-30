@@ -1,8 +1,11 @@
 import React from 'react';
 import './Blog.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Blog = (props) => {
-    const { cover, person, name, title, publishdate, readtime } = props.blog
+    const { cover, person, name, title, publishdate, readtime } = props.blog;
+    const handleBlogTitle = props.handleBlogTitle;
     return (
         <div className='mx-4'>
             <img className='img-fluid rounded rounded-3 mb-3' src={cover} alt="" />
@@ -13,7 +16,7 @@ const Blog = (props) => {
                         <h5>{name}</h5>
                         <p><small>{publishdate}</small></p>
                     </div>
-                    <p>{readtime} min read (icon)</p>
+                    <p>{readtime} min read  <FontAwesomeIcon onClick={() => handleBlogTitle(title)} className='bookmark' icon={faBookmark} /></p>
                 </div>
             </div>
             <h3>{title}</h3>

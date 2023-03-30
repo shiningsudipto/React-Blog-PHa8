@@ -9,3 +9,7 @@
 .blog-read:hover {
     color: red;
 }
+
+.bookmark {
+    cursor: pointer;
+}

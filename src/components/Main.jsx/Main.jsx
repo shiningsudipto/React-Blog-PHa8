@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 
-const Main = () => {
+const Main = ({ handleBlogTitle }) => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
         fetch('generated.json')
@@ -12,7 +12,7 @@ const Main = () => {
         <div>
             <h2>Main Content</h2>
             {
-                blogs.map(blog => <Blog blog={blog} key={blog.id}></Blog>)
+                blogs.map(blog => <Blog blog={blog} key={blog.id} handleBlogTitle={handleBlogTitle}></Blog>)
             }
         </div>
     );
