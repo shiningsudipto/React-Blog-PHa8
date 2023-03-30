@@ -5,6 +5,7 @@ import Main from './components/Main.jsx/Main';
 import SideBar from './components/SideBar/SideBar';
 
 const App = () => {
+
   return (
     <div className='container'>
       <Header></Header>
