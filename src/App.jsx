@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
 import Main from './components/Main.jsx/Main';
 import SideBar from './components/SideBar/SideBar';
@@ -8,7 +9,12 @@ import SideBar from './components/SideBar/SideBar';
 const App = () => {
   const [bTitle, setBTitle] = useState([])
   const handleBlogTitle = (title) => {
-    setBTitle([...bTitle, title]);
+    const isMatchFound = bTitle.filter((bTitle) => bTitle === title).length > 0;
+    if (isMatchFound) {
+      toast('Already Bookmarked')
+    } else {
+      setBTitle([...bTitle, title]);
+    }
   }
   console.log(bTitle);
 
