@@ -1,0 +1,11 @@
+.blog-avatar {
+    height: 50px;
+}
+
+.blog-read {
+    color: blue;
+}
+
+.blog-read:hover {
+    color: red;
+}
