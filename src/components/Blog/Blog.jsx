@@ -27,7 +27,6 @@ const Blog = (props) => {
                 <button onClick={() => handleReadTime(readtime)} className=' p-0 btn border-0 text-decoration-underline mb-0 blog-read'>Mark as read</button>
                 < hr className='my-4' />
             </div>
-            <div><Question></Question></div>
         </div>
     );
 };

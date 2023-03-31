@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
 import Main from './components/Main.jsx/Main';
 import SideBar from './components/SideBar/SideBar';
+import Question from './components/Question/Question';
 
 const App = () => {
   const [bTitle, setBTitle] = useState([])
@@ -30,10 +31,11 @@ const App = () => {
           <Main handleBlogTitle={handleBlogTitle} handleReadTime={handleReadTime}></Main>
         </div>
         <div className="col-md-4">
-          <SideBar className="position-sticky sticky-top" totalTime={totalTime} blogTitle={bTitle}></SideBar>
+          <SideBar totalTime={totalTime} blogTitle={bTitle}></SideBar>
           <ToastContainer />
         </div>
       </div>
+      <Question></Question>
     </div>
   );
 };
