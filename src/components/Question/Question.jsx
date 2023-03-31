@@ -18,6 +18,7 @@ const Question = () => {
             </div>
             <div>
                 <h4>How does useState work?</h4>
+                <p>useState hook is used to add state to functional components. The useState hook returns an array with two values that is a current state value, and a function to update the state value.</p>
             </div>
             <div>
                 <h4>Which work useEffect do without data load?</h4>
