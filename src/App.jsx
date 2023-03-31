@@ -16,17 +16,21 @@ const App = () => {
       setBTitle([...bTitle, title]);
     }
   }
-  console.log(bTitle);
+  const [totalTime, setTotalTime] = useState(0);
+  const handleReadTime = (readtime) => {
+    setTotalTime(totalTime + readtime);
+  }
 
   return (
     <div className='container'>
       <Header></Header>
+      <hr />
       <div className="body-container row mt-5">
         <div className="col-md-8">
-          <Main handleBlogTitle={handleBlogTitle}></Main>
+          <Main handleBlogTitle={handleBlogTitle} handleReadTime={handleReadTime}></Main>
         </div>
         <div className="col-md-4">
-          <SideBar className="position-sticky sticky-top" blogTitle={bTitle}></SideBar>
+          <SideBar className="position-sticky sticky-top" totalTime={totalTime} blogTitle={bTitle}></SideBar>
           <ToastContainer />
         </div>
       </div>
